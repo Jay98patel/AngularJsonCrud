@@ -1,0 +1,50 @@
+<div class="container">
+    <!-- <div class="row mb-3">
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.name" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.description" placeholder="Description">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.release" placeholder="Price">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 mt-3">
+            <button type="submit" class="btn btn-primary mr-2 " (click)="createupdate(service.cuurentCars)">Save</button>
+            <button type="submit" class="btn btn-secondary" (click)="clear()">Clear</button>
+        </div>
+    </div> -->
+    <div class="row" *ngIf="cars">
+        <div class="col-4 col-md-6 col-sm-12 mb-3" *ngFor="let car of cars">
+            <div class="card">
+                <img class="card-img-top card-img" src="{{BaseURL + car.image}}" alt="{{car.name}}" [routerLink]="['/product/cars',car.id]">
+                <div class="card-body">
+                    <ng-container *ngIf="!car.update">
+                        <h5 class="card-title">
+                            {{car.name}}
+                            <!-- <div *ngIf="showDiv.update" class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div> -->
+                        </h5>
+                        <p class="card-text">{{car.release}}</p>
+                    </ng-container>
+                    <ng-container *ngIf="car.update">
+                        <car-form [car]="car" (saveCar)="updateCar($event)" (cancel)="car.update=false"></car-form>
+                    </ng-container>
+                    <ng-container *ngIf="!car.update">
+                        <a type="button" (click)="car.update=true;" class="btn btn-primary mr-2">Update</a>
+                        <a type="button" (click)="delete(car.id) " class="btn btn-danger mr-2">Delete</a>
+
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

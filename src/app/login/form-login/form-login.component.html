@@ -1,0 +1,29 @@
+<div fxLayout="column">
+    <div fxLayout="row">
+        <mat-card fxFlex="60">
+            <mat-card-content>
+                <h2>Login </h2>
+                <form fxLayoutAlign="center center" [formGroup]="service.login" #cform="ngForm" (ngSubmit)="onSubmit()">
+
+                    <div fxLayout="row" fxLayoutGap="20px">
+                        <mat-form-field>
+                            <input matInput formControlName="email" placeholder="Email id">
+                            <mat-error>
+                                This Field is Mandatory
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput type="password" formControlName="password" placeholder="Password">
+                            <mat-error>
+                                This Field is Mandatory
+                            </mat-error>
+                        </mat-form-field>
+                        <div>
+                            <button mat-raised-button color="primary" [routerLink]="['/product']" [disabled]="service.login.invalid" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+$background-dark: #512DA8;
+.normal-form {
+    margin: 10px
+}
+
+.mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+.background-primary {
+    background-color: $background-dark!important;
+}
+
+.text-floral-white {
+    color: floralwhite!important;
+}

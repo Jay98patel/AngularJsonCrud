@@ -1,0 +1,60 @@
+<div class="container" fxLayout="row" fxLayoutGap="10px">
+    <div *ngIf="cars" fxFlex="30">
+        <div *ngFor="let c of cars">
+
+            <h4>
+                {{c.name}}
+            </h4>
+            <div class="img-wrapper">
+                <img class=" img-fluid" src="{{BaseURL + c.image}}" alt="{{c.name}}">
+            </div>
+            <div>
+                <p matLine>{{c.release}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!cars" [hidden]="cars">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="bikes" fxFlex="30">
+        <div *ngFor="let b of bikes">
+
+            <h4>
+                {{b.name}}
+            </h4>
+            <div class="img-wrapper">
+                <img class="img-fluid" src="{{BaseURL + b.image}}" alt="{{b.name}}">
+            </div>
+            <div>
+                <p matLine>{{b.release}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!bikes" [hidden]="bikes">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="accessories" fxFlex="30">
+        <div *ngFor="let a of accessories">
+
+            <h4>
+                {{a.name}}
+            </h4>
+            <div class="img-wrapper">
+                <img class="img-fluid" src="{{BaseURL + a.image}}" alt="{{a.name}}">
+            </div>
+            <div>
+                <p matLine>{{a.release}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!accessories" [hidden]="accessories">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div>
+
+</div>

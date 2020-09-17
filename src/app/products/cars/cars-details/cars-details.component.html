@@ -1,0 +1,17 @@
+<div class="container" fxLayout="row">
+    <div fxFlex="40" *ngIf="car">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h3>{{car.name}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{BaseURL + car.image}}" alt={{car.name}}>
+            <mat-card-content>
+                <p>{{car.description}}
+                </p>
+            </mat-card-content>
+
+        </mat-card>
+    </div>
+</div>
