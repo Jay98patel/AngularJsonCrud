@@ -1,30 +1,10 @@
 <div class="container">
-    <!-- <div class="row mb-3">
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.name" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.description" placeholder="Description">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.cuurentCars.release" placeholder="Price">
-            </div>
-        </div>
-
-        <div class="col-12 col-md-3 mt-3">
-            <button type="submit" class="btn btn-primary mr-2 " (click)="createupdate(service.cuurentCars)">Save</button>
-            <button type="submit" class="btn btn-secondary" (click)="clear()">Clear</button>
-        </div>
-    </div> -->
     <div class="row" *ngIf="cars">
-        <div class="col-4 col-md-6 col-sm-12 mb-3" *ngFor="let car of cars">
-            <div class="card">
-                <img class="card-img-top card-img" src="{{BaseURL + car.image}}" alt="{{car.name}}" [routerLink]="['/product/cars',car.id]">
+        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let car of cars">
+            <div class="card border-0 shadow">
+                <div class="card-img">
+                    <img class="img-fluid cursor-pointer" src="{{BaseURL + car.image}}" alt="{{car.name}}" [routerLink]="['/product/cars',car.id]">
+                </div>
                 <div class="card-body">
                     <ng-container *ngIf="!car.update">
                         <h5 class="card-title">

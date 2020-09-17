@@ -1,26 +1,5 @@
 <div class="container" *ngIf="bikes">
-    <div class="row mb-3">
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.name" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.description" placeholder="Description">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.release" placeholder="Price">
-            </div>
-        </div>
 
-        <div class="col-12 col-md-3 mt-3">
-            <button type="submit" class="btn btn-primary mr-2 " (click)="createupdate(service.currentBike)">Save</button>
-            <button type="submit" class="btn btn-secondary" (click)="clear()">Clear</button>
-        </div>
-    </div>
     <div class="row">
         <div class="col-4 col-md-6 col-sm-12 mb-3" *ngFor="let c of bikes">
             <div class="card">
