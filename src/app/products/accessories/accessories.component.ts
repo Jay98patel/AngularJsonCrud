@@ -8,6 +8,7 @@ import { ServiceService } from '../service/service.service'
 })
 export class AccessoriesComponent implements OnInit {
   accessories:Database[];
+  search: string;
   constructor(public service:ServiceService,@Inject('BaseURL')public BaseURL) { }
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ export class AccessoriesComponent implements OnInit {
     else{
       console.log('created');
       this.newAcce(cuureacces);
+      this.service.getAllaccesories().subscribe((acce)=>this.accessories=acce);
     }
   }
   newAcce(acce:Database){
@@ -39,7 +41,19 @@ export class AccessoriesComponent implements OnInit {
     this.service.getAllaccesories().subscribe((acce)=>this.accessories=acce);
   }
   updateAcce(acce:Database){
-    this.service.updateBikes(acce).subscribe();
-    this.service.getAllaccesories().subscribe((acce)=>this.accessories=acce);
+    this.service.updateaccesories(acce).subscribe(
+      ()=>{
+        this.service.getAllaccesories().subscribe((acce)=>this.accessories=acce);
+      }
+    );
+  }
+  clear(){
+    this.service.currentAccessories={
+      id: null,
+      name:'',
+      description:'',
+      release:'',
+      image:null
+  }
   }
 }

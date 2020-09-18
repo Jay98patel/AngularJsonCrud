@@ -46,7 +46,7 @@ export class CarFormComponent implements OnInit {
 
   private createForm() {
     this.carFormGroup = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.maxLength(20)]],
+      name: ['', [Validators.required]],
       description: [''],
       release: ['']
     })

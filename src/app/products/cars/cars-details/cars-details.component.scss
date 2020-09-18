@@ -1,0 +1,13 @@
+.container {
+    margin: 20px;
+    display: flex;
+}
+
+.img-wrapper {
+    width: 300px;
+    height: auto;
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+}

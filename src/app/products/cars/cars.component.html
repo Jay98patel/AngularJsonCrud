@@ -1,6 +1,32 @@
+<div class="card mb-2">
+
+    <div class="row">
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="service.cuurentCars.image">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Description" [(ngModel)]="service.cuurentCars.description">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Price" [(ngModel)]="service.cuurentCars.release">
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-success " (click)="createupdate(service.cuurentCars)">Create</button>
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-warning" (click)="clear()">Clear</button>
+        </div>
+    </div>
+
+</div>
 <div class="container">
+    <div class="col-3 mb-3">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="search" placeholder="Search">
+        </div>
+    </div>
     <div class="row" *ngIf="cars">
-        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let car of cars">
+        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let car of cars | filter:search">
             <div class="card border-0 shadow">
                 <div class="card-img">
                     <img class="img-fluid cursor-pointer" src="{{BaseURL + car.image}}" alt="{{car.name}}" [routerLink]="['/product/cars',car.id]">

@@ -9,6 +9,7 @@ import { ServiceService } from '../service/service.service'
 export class CarsComponent implements OnInit {
   constructor(public service:ServiceService,@Inject('BaseURL')public BaseURL ) { }
   cars:Database[];
+  search: string;
   showDiv = {
     update:false
   }
@@ -30,11 +31,11 @@ export class CarsComponent implements OnInit {
   createupdate(cuurentCars:Database){
     console.log(cuurentCars);
     if(cuurentCars.id!=null){
-      console.log('update')
+      // console.log('update')
       this.updateCar(cuurentCars);
     }
     else{
-      console.log('created');
+      // console.log('created');
       this.newCar(cuurentCars);
     }
 

@@ -1,15 +1,52 @@
-<div class="container" *ngIf="accessories">
+<div class="card mb-2">
 
     <div class="row">
-        <div class="col-4 col-md-6 col-sm-12 mb-3" *ngFor="let c of accessories">
-            <div class="card">
-                <img class="card-img-top card-img" src="{{BaseURL + c.image}}" alt="{{c.name}}" [routerLink]="['/product',c.id]">
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="service.currentAccessories.image">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Description" [(ngModel)]="service.currentAccessories.description">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Price" [(ngModel)]="service.currentAccessories.release">
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-primary mr-2" (click)="createupdate(service.currentAccessories)">Create</button>
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-warning" (click)="clear()">Clear</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" *ngIf="accessories">
+    <div class="col-3 mb-3">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="search" placeholder="Search">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let acce of accessories | filter:search">
+            <div class="card border-0 shadow">
+                <div class="card-img">
+                    <img class="img-fluid cursor-pointer" src="{{BaseURL + acce.image}}" alt="{{acce.name}}" [routerLink]="['/product/accessories',acce.id]">
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{c.name}}</h5>
-                    <p class="card-text">{{c.release}}</p>
-                    <a type="button" class="btn btn-success">Create</a>
-                    <a type="button" class="btn btn-primary">Update</a>
-                    <a type="button" class="btn btn-danger">Delete</a>
+                    <ng-container *ngIf="!acce.update">
+                        <h5 class="card-title">
+                            {{acce.name}}
+                        </h5>
+                        <p class="card-text">{{acce.release}}</p>
+                    </ng-container>
+                    <ng-container *ngIf="acce.update">
+                        <access-form [acce]="acce" (saveAcce)="updateAcce($event)" (cancel)="acce.update=false"></access-form>
+                    </ng-container>
+                    <ng-container *ngIf="!acce.update">
+                        <a type="button" (click)="acce.update=true;" class="btn btn-primary mr-2">Update</a>
+                        <a type="button" (click)="delete(acce.id) " class="btn btn-danger mr-2">Delete</a>
+
+                    </ng-container>
                 </div>
             </div>
         </div>

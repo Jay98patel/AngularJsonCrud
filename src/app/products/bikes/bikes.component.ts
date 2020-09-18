@@ -7,8 +7,12 @@ import { ServiceService } from '../service/service.service'
   styleUrls: ['./bikes.component.scss']
 })
 export class BikesComponent implements OnInit {
-  bikes:Database[];
   constructor(public service:ServiceService,@Inject('BaseURL')public BaseURL) { }
+  bikes:Database[];
+  search: string;
+  showDiv = {
+    update:false
+  }
 
   ngOnInit(): void {
     this.service.getAllBikes().subscribe((car)=>this.bikes=car);
@@ -27,20 +31,24 @@ export class BikesComponent implements OnInit {
     console.log(currentBike);
     if(currentBike.id!=null){
       console.log('update')
-      this.updateCar(currentBike);
+      this.updateBike(currentBike);
     }
     else{
       console.log('created');
-      this.newCar(currentBike);
+      this.newBike(currentBike);
+      this.service.getAllBikes().subscribe((bike)=>this.bikes=bike);
     }
   }
-  newCar(bike:Database){
+  newBike(bike:Database){
     this.service.newBikes(bike).subscribe();
-    this.service.getAllBikes().subscribe((car)=>this.bikes=car);
+    this.service.getAllBikes().subscribe((bike)=>this.bikes=bike);
   }
-  updateCar(bike:Database){
-    this.service.updateBikes(bike).subscribe();
-    this.service.getAllBikes().subscribe((car)=>this.bikes=car);
+  updateBike(bike:Database){
+    this.service.updateBikes(bike).subscribe(
+      ()=>{
+        this.service.getAllBikes().subscribe((bike)=>this.bikes=bike);
+      }
+    );
   }
   clear(){
     this.service.currentBike={
