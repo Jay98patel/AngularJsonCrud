@@ -1,0 +1,164 @@
+{
+    "cars": [{
+            "id": "1",
+            "name": "Zenvo ST2",
+            "image": "images/zenvo.jpg",
+            "description": "Kicking off our list is less of a car and more of an unchained animal in the ST1. Assembled in Zealand, Denmark, the Zenvo creates an absolutely obscene amount of power by combining a 6.8-liter V8 with both a supercharger and a turbocharger. Just how much is obscene exactly? How about 1,104 horsepower and 1,054 pound-feet of torque, all channeled to the car’s rear wheels.",
+            "release": "$1.6M",
+            "update": true
+        },
+        {
+            "id": "2",
+            "name": "Ferrari LaFerrari",
+            "image": "images/ferrari.jpg",
+            "description": "Few cars on the road are more striking, and even fewer accelerate faster. With a dry weight of less than 2,800 pounds, this dragon-like performance car accelerates from 0 to 60 mph in less than 3.0 seconds, and it’ll prance to 124 mph in under 7. Flat out, it’ll top 217 mph.",
+            "release": "$1.4M",
+            "update": true
+        },
+        {
+            "id": "3",
+            "name": " Pagani Huayra",
+            "image": "images/pagani-huayra.jpg",
+            "description": "The Huayra is equally as famous for its odd-sounding name as it is for its face-melting performance. Named after the Incan God of Winds, the Huayra (pronounced why-rah) boasts an AMG-sourced 6.0-liter V12 with two turbochargers, resulting in 620 hp and and a massive 740 lb-ft.",
+            "release": "$1.4M",
+            "update": true
+        },
+        {
+            "id": "4",
+            "name": " Aston Martin One-77",
+            "image": "images/aston-martin.jpg",
+            "description": "Under the vented hood lurks a naturally aspirated V12 that displaces 7.3 liters, which is a lot. It produces 750 hp and 553 lb-ft, which is also a lot. Those numbers make the One-77 the fastest Aston Martin ever made, as this spy chaser will top 220 mph in the right conditions. From a stop, it’ll do 0 to 60 mph in 3.5 seconds.",
+            "release": "$1.4M",
+            "update": true
+        },
+        {
+            "id": "5",
+            "name": " Koenigsegg One:1 ",
+            "image": "images/koenigsegg.jpg",
+            "description": "You can buy a lot with $2 million — a really nice house, about 80 Mazda MX-5’s, or the Swedish “megacar” shown above. A logical thinker could probably think of a better way to spend your life savings, but megacars don’t give a damn about logic. Because they’re mega. And after reading what the car is capable of, $2 million might actually be a steal.",
+            "release": "$2.0M",
+            "update": true
+        },
+        {
+            "id": "6",
+            "name": "Lamborghini Veneno",
+            "image": "images/lamborghini.jpg",
+            "description": "The car is absolutely stunning from every angle, and to this day, we’re not convinced it isn’t an alien spacecraft surveying our planet for eventual takeover. It just doesn’t seem real. The only thing more remarkable than the look is the price — a whopping $4.5 million.",
+            "release": "$4.5M",
+            "update": true
+        },
+        {
+            "id": "7",
+            "name": "Koenigsegg CCXR Trevita ",
+            "image": "images/koenigsegg-trevita.jpg",
+            "description": "Underneath the lustrous finish lies a 4.8-liter, dual-supercharged V8 with a total output of 1,004 hp and 797 lb-ft, which means it should have little to no trouble overtaking semis on the freeway. The car’s specifications — in both performance and price — are nearly comical at this point, and just three were ever made.",
+            "release": "$4.8M",
+            "update": true
+        }
+    ],
+    "bikes": [{
+            "id": "0",
+            "name": "Royal enfield Classic 350",
+            "image": "images/royal-enfield-classic-350-redditch-red.png",
+            "description": "Classic 350 commuter mimics elder sibling Classic 500 when it comes to styling, or to put it this way, it can be referred as the smaller version of the latter. Donning the retro design, the commuter bike is reminiscent of classic machines from yesteryears.  Power generation is done by a UCE engine displacing 346cc. Outputting decent power and torque, the engine yields reasonable mileage. On the performance front, Classic 350 does well, offering great ride quality.",
+            "release": "₹ 1.69 Lacs",
+            "update": true
+        },
+        {
+            "id": "2",
+            "name": "BMW K 1200S, 174 miles per hour",
+            "image": "images/bmw-k1200s.webp",
+            "description": "BMW K 1200S is a hyper-sports touring motorcycle from BMW. This motorcycle features 1157 CC, 16 valves four-cylinder engine, which generates power of 164 HP @ 10250 rpm. BMW K 1200s can reach a maximum speed of 174 miles per hour.",
+            "release": "$12,000",
+            "update": true
+        },
+        {
+            "id": "4",
+            "name": "Kawasaki Ninja ZX-14R, 208.1 miles per hour",
+            "image": "images/ninja-zx-14r.webp",
+            "description": "At the top speed of 208.1 mph, Kawasaki Ninja ZX-14R is the second fastest production motorcycle till date. This super machine could cross 0 to 100 km/h in just 2.7 seconds. Ninja ZX-14R features a 1441 CC four valve liquid cooled engine.",
+            "release": "$22,000",
+            "update": true
+        },
+        {
+            "id": "5",
+            "name": "MTT Turbine Superbike Y2K",
+            "image": "images/turbine-superbike-y2k.webp",
+            "description": "MTT Turbine Superbike is a non-production motorcycle from Marine Turbine Technologies which is recognized as ‘the most powerful production motorcycle’ by Guinness book of world records. To be specific, Turbine Superbike Y2K is a wheel-driven motorcycle with a turboshaft engine that manufactured between 2000 and 2005.",
+            "release": "$32,000",
+            "update": true
+        },
+        {
+            "id": "6",
+            "name": "Dodge Tomahawk, 420 miles per hour",
+            "image": "images/dodge-tomahawk.webp",
+            "description": "At the top speed of 420 mph, the Dodge Tomahawk is the world’s fastest motorcycle ever produced. Dodge unveiled this ultimate superbike in 2003. According to the reports, only 9 of this motorcycle has been sold yet",
+            "release": "$23,000",
+            "update": true
+        }
+    ],
+    "accessories": [{
+            "id": "2",
+            "name": "Thule Motion XT XXL Rooftop Cargo",
+            "image": "images/thule-motion-xt.jpg",
+            "description": "At 22 cubic feet, Thule’s Motion XT XXL cargo box is sure to accommodate all your family’s belongings on the next big road trip. The hardshell roof rack is both stylish and easy to mount, with a smooth SlideLock system and an integrated torque indicator that clicks when it’s fixed. ",
+            "release": "$1.5k"
+        },
+        {
+            "id": "7",
+            "name": "Armor All Car Vacuum Cleaner",
+            "image": "images/armor-portable-vaccum-cleaner.jpg",
+            "description": "Keeping things spick and span on a road trip is no easy job, but a portable vacuum like Armor All 12V Car Vac can do wonders for the cleanliness of your vehicle. Lightweight, compact, and easy to use, this handheld device plugs into your car’s 12-volt outlet and can pick up both wet and dry debris. ",
+            "release": "$1.3k"
+        }, {
+            "id": "8",
+            "name": "Alexa-Enabled Roav VIVA Car Charger",
+            "image": "images/roav-viva.jpg",
+            "description": "Bring Amazon’s intelligent voice service into your car with Anker’s Roav VIVA. The first Alexa-enabled car charger, this dual-port USB device plugs into your cigarette lighter, juicing your staff while also offering access to over 25,000 Alexa skills.",
+            "release": "$1.1k"
+        },
+        {
+            "id": "9",
+            "name": "Nonda ZUS Smart Tire Safety Monitor",
+            "image": "images/nonda-tire-safety-monitor.jpg",
+            "description": "With ZUS, Nonda’s latest in-car gadget, you can track the tire pressure in real time from your mobile phone. The smart tire safety monitor detects slow leaks before it’s too late thanks to its innovative AccuTemp Algorithm. ",
+            "release": "$2.7k"
+        },
+        {
+            "id": "9",
+            "name": "Escort iX Long Range Radar Detector",
+            "image": "images/escort-ix-radar.jpg",
+            "description": "With its intelligent features and outstanding long-range detection ability, Escort iX is a trustworthy companion for travelers who are often on the road. The device is one of the most technologically advanced radar detectors on the market, and – if you have a lead foot – your best bet for avoiding annoying speeding tickets on the highway.",
+            "release": "$3.5k"
+        },
+        {
+            "id": "10",
+            "name": "YI Mirror Dash Camera",
+            "image": "images/yi-mirror-dash-cam.jpg",
+            "description": "Feeling safe at all times is essential to your experience on the road, which is why a dashcam is one of the best car gadgets you can buy. In addition to capturing fun videos of you and your friends on a road trip, they can be decisive in the event of an accident, being capable to provide evidence to law enforcement and insurance companies.",
+            "release": "$2.5k"
+        }
+
+    ],
+    "first": [{
+        "id": "0",
+        "name": "Zenvo ST1",
+        "image": "images/zenvo.jpg",
+        "description": "Kicking off our list is less of a car and more of an unchained animal in the ST1. Assembled in Zealand, Denmark, the Zenvo creates an absolutely obscene amount of power by combining a 6.8-liter V8 with both a supercharger and a turbocharger. Just how much is obscene exactly? How about 1,104 horsepower and 1,054 pound-feet of torque, all channeled to the car’s rear wheels.",
+        "release": "$1.2M"
+    }],
+    "second": [{
+        "id": "0",
+        "name": "Royal Enfield Classic 350",
+        "image": "images/royal-enfield-classic-350-redditch-red.png",
+        "description": "Classic 350 commuter mimics elder sibling Classic 500 when it comes to styling, or to put it this way, it can be referred as the smaller version of the latter. Donning the retro design, the commuter bike is reminiscent of classic machines from yesteryears.  Power generation is done by a UCE engine displacing 346cc. Outputting decent power and torque, the engine yields reasonable mileage. On the performance front, Classic 350 does well, offering great ride quality.",
+        "release": "₹ 1.69 Lakh"
+    }],
+    "third": [{
+        "id": "0",
+        "name": "HUDWAY Cast Heads-Up Display (HUD)",
+        "images": "images/hudway-hud.jpg",
+        "description": "The first car gadget of its kind, HUDWAY Cast turns any smartphone into a heads-up display (HUD) for your vehicle, projecting the GPS onto a transparent screen in front of you. Supported by both Android and iOS devices, it can also be used to receive calls, read texts, and control music. Who says those of us who don’t necessarily own a new, high-end automobile can’t keep up with the latest in automotive technology?",
+        "release": "$1.2k"
+    }]
+}
