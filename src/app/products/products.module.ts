@@ -6,18 +6,16 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
 import { MatListModule } from '@angular/material/list';
 
-import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [ 
-    ProductsComponent,
+    ProductsComponent
   ],
   imports: [
     CommonModule,
     ProductsRoutingModule,
     MatSidenavModule,
-    
     MatListModule
   ],providers:[]
 })

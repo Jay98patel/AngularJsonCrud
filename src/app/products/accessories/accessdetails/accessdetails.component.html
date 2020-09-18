@@ -1,0 +1,20 @@
+<div class="col-12 col-md-6 col-lg-4 mb-3" *ngIf="acce">
+    <div class="card border-0 shadow" *ngIf="acce">
+        <div class="card-img">
+            <img class="img-fluid cursor-pointer" src="{{BaseURL + acce.image}}" alt="{{acce.name}}">
+        </div>
+        <div class="card-body">
+            <ng-container>
+                <h5 class="card-title">
+                    {{acce.name}}
+                </h5>
+                <p>{{acce.description}}
+                </p>
+                <p class="card-text">{{acce.release}}</p>
+                <div>
+                    <a type="button" class="btn btn-success" (click)="goBack()">Back</a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

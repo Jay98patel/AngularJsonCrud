@@ -1,60 +1,59 @@
-<div class="container" fxLayout="row" fxLayoutGap="10px">
-    <div *ngIf="cars" fxFlex="30">
-        <div *ngFor="let c of cars">
-
-            <h4>
-                {{c.name}}
-            </h4>
-            <div class="img-wrapper">
-                <img class=" img-fluid" src="{{BaseURL + c.image}}" alt="{{c.name}}">
+<div class="row mx-0">
+    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngIf="cars">
+        <div class="card border-0 shadow" *ngFor="let c of cars">
+            <div class="card-img">
+                <img class="img-fluid cursor-pointer" src="{{BaseURL + c.image}}" alt="{{c.name}}">
             </div>
-            <div>
-                <p matLine>{{c.release}}</p>
+            <div class="card-body">
+                <ng-container>
+                    <h5 class="card-title">
+                        {{c.name}}
+                    </h5>
+                    <p class="card-text">{{c.release}}</p>
+                </ng-container>
             </div>
         </div>
     </div>
-
     <div *ngIf="!cars" [hidden]="cars">
         <mat-spinner></mat-spinner>
         <h4>Loading . . . Please Wait</h4>
     </div>
-    <div *ngIf="bikes" fxFlex="30">
-        <div *ngFor="let b of bikes">
-
-            <h4>
-                {{b.name}}
-            </h4>
-            <div class="img-wrapper">
-                <img class="img-fluid" src="{{BaseURL + b.image}}" alt="{{b.name}}">
+    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngIf="bikes">
+        <div class="card border-0 shadow" *ngFor="let c of bikes">
+            <div class="card-img">
+                <img class="img-fluid cursor-pointer" src="{{BaseURL + c.image}}" alt="{{c.name}}">
             </div>
-            <div>
-                <p matLine>{{b.release}}</p>
+            <div class="card-body">
+                <ng-container>
+                    <h5 class="card-title">
+                        {{c.name}}
+                    </h5>
+                    <p class="card-text">{{c.release}}</p>
+                </ng-container>
             </div>
         </div>
     </div>
-
     <div *ngIf="!bikes" [hidden]="bikes">
         <mat-spinner></mat-spinner>
         <h4>Loading . . . Please Wait</h4>
     </div>
-    <div *ngIf="accessories" fxFlex="30">
-        <div *ngFor="let a of accessories">
-
-            <h4>
-                {{a.name}}
-            </h4>
-            <div class="img-wrapper">
-                <img class="img-fluid" src="{{BaseURL + a.image}}" alt="{{a.name}}">
+    <div class="col-12 col-md-6 col-lg-4 mb-3" *ngIf="accessories">
+        <div class="card border-0 shadow" *ngFor="let c of accessories">
+            <div class="card-img">
+                <img class="img-fluid cursor-pointer" src="{{BaseURL + c.image}}" alt="{{c.name}}">
             </div>
-            <div>
-                <p matLine>{{a.release}}</p>
+            <div class="card-body">
+                <ng-container>
+                    <h5 class="card-title">
+                        {{c.name}}
+                    </h5>
+                    <p class="card-text">{{c.release}}</p>
+                </ng-container>
             </div>
         </div>
     </div>
-
     <div *ngIf="!accessories" [hidden]="accessories">
         <mat-spinner></mat-spinner>
         <h4>Loading . . . Please Wait</h4>
     </div>
-
 </div>

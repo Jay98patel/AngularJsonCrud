@@ -63,10 +63,15 @@ updateCar(car:Database):Observable<Database>{
 
 //For bikes
   getAllBikes():Observable<Database[]>{
-    return this.http.get<Database[]>(this.baseURL+'bikes');
+    return this.http.get<Database[]>(this.baseURL+'bikes').pipe(
+      map((data: any[])=> data.map((item: any)=> {
+        item.update = false
+        return item;
+      }))
+        );
   }
-  getBikeID():Observable<string[] | any>{
-    return this.getAllBikes().pipe(map(car => car.map(cars => cars.id)));
+  getBikeID(id):Observable<string[] | any>{
+    return this.http.get<Database>(this.baseURL+'bikes/'+id)
   }
   deleteBikes(id:string):Observable<Database>{
     return this.http.delete<Database>(this.baseURL+'bikes'+'/'+id);
@@ -80,7 +85,15 @@ updateCar(car:Database):Observable<Database>{
 
   //For Accessories
   getAllaccesories():Observable<Database[]>{
-    return this.http.get<Database[]>(this.baseURL+'accessories');
+    return this.http.get<Database[]>(this.baseURL+'accessories').pipe(
+      map((data: any[])=> data.map((item: any)=> {
+        item.update = false
+        return item;
+      }))
+    );
+  }
+  getAcceID(id):Observable<string[] | any>{
+    return this.http.get<Database>(this.baseURL+'accessories/'+id)
   }
   deleteaccesories(id:string):Observable<Database>{
     return this.http.delete<Database>(this.baseURL+'accessories'+'/'+id);

@@ -1,1 +1,20 @@
-<p>bikesdetails works!</p>
+<div class="col-12 col-md-6 col-lg-4 mb-3" *ngIf="bikes">
+    <div class="card border-0 shadow" *ngIf="bikes">
+        <div class="card-img">
+            <img class="img-fluid cursor-pointer" src="{{BaseURL + bikes.image}}" alt="{{bikes.name}}">
+        </div>
+        <div class="card-body">
+            <ng-container>
+                <h5 class="card-title">
+                    {{bikes.name}}
+                </h5>
+                <p>{{bikes.description}}
+                </p>
+                <p class="card-text">{{bikes.release}}</p>
+                <div>
+                    <a type="button" class="btn btn-success" (click)="goBack()">Back</a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

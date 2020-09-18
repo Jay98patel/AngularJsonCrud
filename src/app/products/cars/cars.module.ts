@@ -8,7 +8,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ServiceService } from '../service/service.service';
 import { CarFormComponent } from './car-form/car-form.component'
 import { CarsComponent } from './cars.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [CarsDetailsComponent,CarsComponent, CarFormComponent],
   imports: [
@@ -18,6 +18,7 @@ import { CarsComponent } from './cars.component';
     CarsRoutingModule,
     FlexLayoutModule,
     MatIconModule,
+    Ng2SearchPipeModule
    
   ],
   providers:[ServiceService]

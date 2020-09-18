@@ -1,36 +1,52 @@
-<div class="container" *ngIf="bikes">
-    <div class="row mb-3">
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.name" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.description" placeholder="Description">
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="service.currentBike.release" placeholder="Price">
-            </div>
-        </div>
+<div class="card mb-2">
 
-        <div class="col-12 col-md-3 mt-3">
-            <button type="submit" class="btn btn-primary mr-2 " (click)="createupdate(service.currentBike)">Save</button>
-            <button type="submit" class="btn btn-secondary" (click)="clear()">Clear</button>
+    <div class="row">
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="service.currentBike.image">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Description" [(ngModel)]="service.currentBike.description">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Price" [(ngModel)]="service.currentBike.release">
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-primary mr-2" (click)="createupdate(service.currentBike)">Create</button>
+        </div>
+        <div class="col">
+            <button type="button" class="form-control btn btn-warning" (click)="clear()">Clear</button>
+        </div>
+    </div>
+
+</div>
+<div class="container" *ngIf="bikes">
+    <div class="col-3 mb-3">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="search" placeholder="Search">
         </div>
     </div>
     <div class="row">
-        <div class="col-4 col-md-6 col-sm-12 mb-3" *ngFor="let c of bikes">
-            <div class="card">
-                <img class="card-img-top card-img" src="{{BaseURL + c.image}}" alt="{{c.name}}" [routerLink]="['/product',c.id]">
+        <div class="col-12 col-md-6 col-lg-4 mb-3" *ngFor="let bike of bikes | filter:search">
+            <div class="card border-0 shadow">
+                <div class="card-img">
+                    <img class="img-fluid cursor-pointer" src="{{BaseURL + bike.image}}" alt="{{bike.name}}" [routerLink]="['/product/bikes',bike.id]">
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{c.name}}</h5>
-                    <p class="card-text">{{c.release}}</p>
-                    <a type="button" class="btn btn-success">Create</a>
-                    <a type="button" (click)="edit(c)" class="btn btn-primary">Update</a>
-                    <a type="button" (click)="delete(c.id)" class="btn btn-danger">Delete</a>
+                    <ng-container *ngIf="!bike.update">
+                        <h5 class="card-title">
+                            {{bike.name}}
+
+                        </h5>
+                        <p class="card-text">{{bike.release}}</p>
+                    </ng-container>
+                    <ng-container *ngIf="bike.update">
+                        <bike-form [bike]="bike" (saveBike)="updateBike($event)" (cancel)="bike.update=false"></bike-form>
+                    </ng-container>
+                    <ng-container *ngIf="!bike.update">
+                        <a type="button" (click)="bike.update=true;" class="btn btn-primary mr-2">Update</a>
+                        <a type="button" (click)="delete(bike.id) " class="btn btn-danger mr-2">Delete</a>
+
+                    </ng-container>
                 </div>
             </div>
         </div>
